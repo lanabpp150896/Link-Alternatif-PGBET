@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Website Sederhana — VS Code</title>
+  <meta name="description" content="Contoh website satu halaman dengan HTML + CSS + JS terpisah.">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="wrap">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">P7G</div>
+        <a href="#home" class="title">ALTERNATIF LINK</a>
+      </div>
+      <div class="spacer"></div>
+      <div class="links">
+        <a href="#fitur">Fitur</a>
+        <a href="#galeri">Galeri</a>
+        <a href="#faq">FAQ</a>
+        <a href="#kontak" class="pill">Kontak</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header id="home" class="hero">
+    <div class="container">
+      <span class="kicker">Link Official + LIVE SERVER</span>
+      <h1>PGBET OFFICIAL<br/>Cepat, Ringkas, Estetik</h1>
+      <p>Silahkan klik link di bawah ini untuk claim hadiah-hadiah menarik jutaan rupiah.</p>
+      <div class="cta">
+  <a class="btn primary" href="https://menang6.com" target="_blank">LOGIN</a>
+  <a class="btn ghost" href="https://menang6.com/desktop/register" target="_blank">DAFTAR</a>
+</div>
+      <div class="mt-3" aria-hidden="true">⬇︎</div>
+    </div>
+  </header>
+
+  <!-- FEATURES -->
+  <section id="fitur" class="features">
+    <div class="container">
+      <div class="row">
+        <span class="kicker">Kenapa cocok untuk pemula</span>
+      </div>
+      <h2>Fitur Utama</h2>
+      <div class="grid">
+        <article class="card">
+          <span class="tag">Terpercaya</span>
+          <h3>S3 (Set Sat Set)</h3>
+          <p>Langsung masuk tanpa ribet dan menunggu lama.</p>
+        </article>
+        <article class="card">
+          <span class="tag tag-ok">Responsif</span>
+          <h3>Penanganan Ramah</h3>
+          <p>Datang dan lampirkan keluhan dengan penanganan cepat dan akurat, mengatasi semua masalah anda secara live.</p>
+        </article>
+        <article class="card">
+          <span class="tag tag-warn">Pembayaran Cepat</span>
+          <h3>Pasti Dibayar</h3>
+          <p>Lancar pembayaran dengan metode apapun dan kemenangan apapun.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="galeri" class="gallery">
+  <div class="container">
+    <span class="kicker">Promosi</span>
+    <h2>Galeri / Portofolio</h2>
+    <div class="grid">
+      <div class="img">
+        <img src="assets/foto1.jpg" alt="Portofolio 1">
+      </div>
+      <div class="img">
+        <img src="assets/foto4.jpg" alt="Portofolio 4">
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- CONTACT -->
+  <section id="kontak" class="contact">
+    <div class="container">
+      <span class="kicker">Butuh bantuan?</span>
+      <h2>Hubungi Saya</h2>
+      <form id="contactForm" onsubmit="return false">
+        <div>
+          <label>Nama</label>
+          <input required placeholder="Nama kamu" id="nama" />
+        </div>
+        <div>
+          <label>Email</label>
+          <input required type="email" placeholder="email@contoh.com" id="email" />
+        </div>
+        <div>
+          <label>Pesan</label>
+          <textarea rows="4" placeholder="Tulis pesan kamu di sini" id="pesan"></textarea>
+        </div>
+        <div class="row mt-2">
+          <button class="btn primary" id="kirim">Kirim</button>
+          <span id="status" class="pill" aria-live="polite">Belum terkirim</span>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    © <span id="year"></span> Dibuat dengan ♥ di VS Code —
+    <a href="#home">Kembali ke atas</a>
+  </footer>
+</body>
+</html>
