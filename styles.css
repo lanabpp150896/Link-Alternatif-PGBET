@@ -1,0 +1,104 @@
+:root{
+  --bg:#0f1226;
+  --card:#15183a;
+  --ink:#e9ecff;
+  --muted:#aab1ff;
+  --brand:#6d8bff;
+  --brand-2:#7df3ff;
+  --ok:#35d399;
+  --warn:#ffd166;
+  --danger:#ff6b6b;
+  --shadow: 0 10px 30px rgba(0,0,0,.3);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0; font:15px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Arial;
+  color:var(--ink); background:
+    radial-gradient(1200px 600px at 10% -10%, rgba(125,243,255,.18), transparent 60%),
+    radial-gradient(1200px 600px at 110% 10%, rgba(109,139,255,.18), transparent 60%),
+    linear-gradient(180deg, #0b0d20, #0f1226 30%);
+}
+a{color:inherit}
+
+/* NAVBAR */
+.nav{
+  position:sticky; top:0; z-index:50;
+  backdrop-filter:saturate(140%) blur(8px);
+  background:rgba(10,12,28,.65);
+  border-bottom:1px solid rgba(255,255,255,.06);
+}
+.nav .wrap{display:flex; align-items:center; gap:14px; padding:12px 20px; max-width:1100px; margin:0 auto}
+.brand{display:flex; align-items:center; gap:10px; font-weight:700}
+.brand .logo{width:28px; height:28px; display:grid; place-items:center; border-radius:8px; background:linear-gradient(135deg,var(--brand),var(--brand-2)); box-shadow:var(--shadow)}
+.nav a{opacity:.9; text-decoration:none}
+.nav .spacer{flex:1}
+.nav .links a{margin-left:16px; padding:6px 10px; border-radius:8px}
+.nav .links a:hover{background:rgba(255,255,255,.06)}
+
+/* LAYOUT */
+section{padding:70px 20px}
+.container{max-width:1100px; margin:0 auto}
+
+/* HERO */
+.hero{padding:90px 20px 70px; text-align:center}
+.hero h1{font-size:42px; line-height:1.15; margin:0 0 10px}
+.hero p{color:var(--muted); margin:0 auto 24px; max-width:720px}
+.cta{display:inline-flex; gap:12px}
+.btn{appearance:none; border:0; cursor:pointer; padding:12px 18px; border-radius:12px; font-weight:700}
+.btn.primary{background:linear-gradient(135deg,var(--brand),var(--brand-2)); color:#0b0d20; box-shadow:var(--shadow)}
+.btn.ghost{background:transparent; color:var(--ink); border:1px solid rgba(255,255,255,.16)}
+.btn:hover{transform:translateY(-1px)}
+
+/* FEATURES */
+.grid{display:grid; gap:16px}
+.features .grid{grid-template-columns:repeat(3,1fr)}
+.card{background:var(--card); border:1px solid rgba(255,255,255,.06); border-radius:16px; padding:16px; box-shadow:var(--shadow)}
+.card h3{margin:8px 0 6px}
+.tag{display:inline-block; padding:3px 8px; border-radius:999px; font-size:12px; color:#0b0d20; background:var(--brand-2); font-weight:700}
+.tag-ok{background:var(--ok); color:#0b0d20}
+.tag-warn{background:var(--warn); color:#0b0d20}
+h2{margin:6px 0 14px}
+
+/* GALLERY */
+.gallery .grid{grid-template-columns:repeat(3,1fr)}
+.img{
+  aspect-ratio:4/3; border-radius:14px; background:#0c1027;
+  background-image:linear-gradient(135deg, rgba(125,243,255,.25), rgba(109,139,255,.25));
+  display:grid; place-items:center; color:rgba(255,255,255,.8); font-weight:700;
+  border:1px solid rgba(255,255,255,.06)
+}
+.note{color:var(--muted); margin-top:12px}
+
+/* FAQ */
+details{background:var(--card); border:1px solid rgba(255,255,255,.08); padding:14px 16px; border-radius:14px}
+details+details{margin-top:10px}
+summary{cursor:pointer; font-weight:700}
+details p{margin:10px 0 0; color:var(--muted)}
+
+/* CONTACT */
+form{display:grid; gap:10px}
+input, textarea{
+  width:100%; background:#0e1230; color:var(--ink);
+  border:1px solid rgba(255,255,255,.12); border-radius:10px; padding:12px
+}
+label{font-size:13px; color:var(--muted)}
+
+/* FOOTER */
+footer{padding:24px 20px; color:var(--muted); border-top:1px solid rgba(255,255,255,.06); text-align:center}
+
+/* UTIL */
+.kicker{letter-spacing:.2em; text-transform:uppercase; font-size:12px; color:var(--brand-2)}
+.row{display:flex; gap:12px; align-items:center}
+.pill{padding:6px 10px; border:1px solid rgba(255,255,255,.16); border-radius:999px}
+.mt-2{margin-top:8px} .mt-3{margin-top:14px} .mt-4{margin-top:22px}
+
+@media (max-width: 900px){
+  .features .grid, .gallery .grid{grid-template-columns:1fr 1fr}
+  .hero h1{font-size:34px}
+  .nav .links{display:none}
+}
+@media (max-width: 560px){
+  .features .grid, .gallery .grid{grid-template-columns:1fr}
+  .hero h1{font-size:28px}
+}
